@@ -1,22 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+// Import React and Monaco Editor
+import React from 'react';
+import Editor from "@monaco-editor/react";  // Monaco Editor import
 
 function App() {
+  const defaultCode = `print("Hello, World!")`; // Default Python code
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Nik's Py Web App</h1>
+        {/* Code Editor */}
+        <Editor
+          height="80vh"                   // Set the height of the editor
+          defaultLanguage="python"         // Set the language to Python
+          defaultValue={defaultCode}       // Initial code displayed in the editor
+          theme="vs-dark"                  // Optional: Set a theme, "vs-dark" for dark mode
+        />
+        <p>Edit the code and click "Run" to see the output!</p>
       </header>
     </div>
   );

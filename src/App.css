@@ -1,18 +1,22 @@
+/* Centering the app's content */
 .App {
   text-align: center;
 }
 
+/* Logo style (you can keep or remove this based on your needs) */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
+/* Optional: Reduce motion for users who prefer it */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
+/* Header section: Styling for the header including dark background and layout */
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -24,10 +28,12 @@
   color: white;
 }
 
+/* Link style */
 .App-link {
   color: #61dafb;
 }
 
+/* Animating the logo (optional) */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +41,28 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Custom header styles for the compiler */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+/* Code editor container style */
+.editor-container {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 800px;
+  height: 80vh;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the paragraph below the editor */
+p {
+  font-size: 1.2rem;
+  color: #61dafb;
+  margin-top: 20px;
 }
