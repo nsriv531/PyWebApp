@@ -3,19 +3,6 @@
   text-align: center;
 }
 
-/* Logo style (you can keep or remove this based on your needs) */
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-/* Optional: Reduce motion for users who prefer it */
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 /* Header section: Styling for the header including dark background and layout */
 .App-header {
   background-color: #282c34;
@@ -26,21 +13,6 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-/* Link style */
-.App-link {
-  color: #61dafb;
-}
-
-/* Animating the logo (optional) */
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 /* Custom header styles for the compiler */
@@ -54,9 +26,41 @@ h1 {
   margin-top: 20px;
   width: 100%;
   max-width: 800px;
-  height: 80vh;
+  height: 50vh;
   border: 1px solid #ccc;
   border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the Run Code button */
+.run-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #61dafb;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.run-button:hover {
+  background-color: #21a1f1;
+}
+
+/* Output window style */
+.output-window {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 800px;
+  min-height: 200px;
+  background-color: #1e1e1e;
+  color: #61dafb;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  white-space: pre-wrap;
+  text-align: left;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 

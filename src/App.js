@@ -1,22 +1,40 @@
 // Import React and Monaco Editor
-import React from 'react';
+import React, { useState } from 'react';
 import Editor from "@monaco-editor/react";  // Monaco Editor import
 
 function App() {
-  const defaultCode = `print("Hello, World!")`; // Default Python code
+  const [code, setCode] = useState('print("Hello, World!")');  // Code from editor
+  const [output, setOutput] = useState('');  // Output state
+
+  // Function to handle code execution (for now, it will be a mock function)
+  const runCode = () => {
+    // Mock execution - replace this with actual back-end API calls for Python code execution
+    const mockOutput = `Executing Python code...\nOutput: Hello, World!`;
+    setOutput(mockOutput);
+  };
 
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Nik's Py Web App</h1>
+        <h1>NashPy</h1>
+
         {/* Code Editor */}
         <Editor
-          height="80vh"                   // Set the height of the editor
+          className="editor-container"
+          height="50vh"                   // Set the height of the editor
           defaultLanguage="python"         // Set the language to Python
-          defaultValue={defaultCode}       // Initial code displayed in the editor
+          value={code}                     // Current code in the editor
+          onChange={(value) => setCode(value)}  // Update state with code changes
           theme="vs-dark"                  // Optional: Set a theme, "vs-dark" for dark mode
         />
-        <p>Edit the code and click "Run" to see the output!</p>
+
+        {/* Run Code Button */}
+        <button className="run-button" onClick={runCode}>Run Code</button>
+
+        {/* Output Window */}
+        <div className="output-window">
+          <pre>{output}</pre>
+        </div>
       </header>
     </div>
   );
